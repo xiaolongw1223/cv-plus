@@ -1,2 +1,2 @@
 # My_CV
-Template from: https://github.com/leouieda/cv
+Template is from: https://github.com/leouieda/cv
