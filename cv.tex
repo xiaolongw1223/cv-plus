@@ -3,3 +3,44 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[11pt, a4paper]{article}
+
+\newcommand{\dept}{Department of Earth & Atmospheric Sciences}
+\newcommand{\university}{University of Houston}
+
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae}
+\newcommand{\FirstName}{Xiaolong}
+\newcommand{\LastName}{Wei}
+\newcommand{\Initials}{X}
+\newcommand{\MyName}{\FirstName\ \LastName}
+\newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
+\newcommand{\Email}{xiaolongw1223@gmail.com}
+\newcommand{\Website}{https://www.researchgate.net/profile/Xiaolong_Wei}
+\newcommand{\Lab}{https://sites.google.com/view/jiajiasun}
+\newcommand{\ORCID}{0000-0002-3160-6086}
+\newcommand{\Affiliation}{\dept \\ \university}
+\newcommand{\Address}{
+  Science & Research Building 1, 3507 Cullen Blvd, Room 216, Houston, Texas, USA
+}
+
+% Control the font size
+\usepackage{anyfontsize}
+
+% Macros to add links
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+\newcommand{\Ongoing}{}
+%\newcommand{\Ongoing}{$\ast$}
+\newcommand{\Future}{future}
+\newcommand{\Review}{in review}
+\newcommand{\Accepted}{accepted}
+\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+
+
+% Define command to insert month name and year as date
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
