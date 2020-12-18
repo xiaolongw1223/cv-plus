@@ -29,7 +29,6 @@
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 
-
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
@@ -40,7 +39,59 @@
 \newcommand{\Accepted}{accepted}
 \newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
 
+% numbering items in reversed orders
+\usepackage{etaremune}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
 \newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Set the page margins
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.1}
+% and the spacing between rows in tables
+\renewcommand{\arraystretch}{1.5}
+
+% Remove space between items in itemize and enumerate
+\usepackage{enumitem}
+\setlist{itemsep=0.2em}
+
+% Use custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set fonts. Requires compilation with xelatex
+\usepackage{fontspec}  % required to make older xelatex compile with UTF8
+
+% Set fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+  \fontsize{10pt}{12pt}\selectfont
+  \MyName
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \Title
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \monthyear\today
+}
+\rhead{}
+\cfoot{\fontsize{10pt}{0}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Metadata for the PDF output and control of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+  pdftitle={\MyName\ - \Title},
+  pdfauthor={\MyName},
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=MidnightBlue
+}
+
+\begin{document}
+
+% No header for the first page
+\thispagestyle{empty}
