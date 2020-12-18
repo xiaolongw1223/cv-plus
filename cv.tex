@@ -4,10 +4,9 @@
 
 \documentclass[11pt, a4paper]{article}
 
+% Identifying information
 \newcommand{\dept}{Department of Earth \& Atmospheric Sciences}
 \newcommand{\university}{University of Houston}
-
-% Identifying information
 \newcommand{\Title}{Curriculum Vit\ae}
 \newcommand{\FirstName}{Xiaolong}
 \newcommand{\LastName}{Wei}
@@ -30,6 +29,7 @@
 % For fancy and multipage tables
 \usepackage{tabularx}
 \usepackage{ltablex}
+
 % Define a new environment to place all CV entries in a 2-column table.
 % Left column are the dates, right column the entries.
 \usepackage{environ}
@@ -40,19 +40,14 @@
 	\end{tabularx}
 }
 
-% Macros to add links
-\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
-
-% Macros to set the year and duration on the left column
+% Macros
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
 \newcommand{\Future}{future}
 \newcommand{\Review}{under review}
 \newcommand{\Revision}{under revision}
 \newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
-
-% numbering items in reversed orders
-\usepackage{etaremune}
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 
 % Define command to insert month name and year as date
 \usepackage{datetime}
@@ -69,6 +64,9 @@
 % Remove space between items in itemize and enumerate
 \usepackage{enumitem}
 \setlist{itemsep=0.2em}
+
+% numbering items in reversed orders
+\usepackage{etaremune}[start=1]
 
 % Use custom colors
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -103,7 +101,10 @@
   urlcolor=MidnightBlue
 }
 
+
+
 \begin{document}
+
 
 % No header for the first page
 \thispagestyle{empty}
@@ -112,6 +113,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
 \begin{center}
+	
 	{\fontsize{36pt}{0}\selectfont \MyName}
 	\\[-0.1cm]
 	\rule{\textwidth}{0.6pt}
@@ -127,13 +129,15 @@
 		\\
 		Website: \href{https://www.\Website}{\Website}
 	}
+
 \end{center}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Education}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Education}
 \begin{EntriesTable}
+	
   \Duration{2018}{}  &
   \textbf{Ph.D in Geophysics}, University of Houston, Houston, USA
   \\
@@ -142,25 +146,28 @@
   \\
   \Duration{2011}{2015}  &
   \textbf{B.S. in Geophysics}, China University of Geosciences, Beijing, China
-
+  
 \end{EntriesTable}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Research Interests}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Research Interests}
 \begin{itemize}
+	
 	\item Inversion of geophysical data sets (e.g., gravity, gravity gradiometry and magnetic data).
 	\item Structural similarity constraint joint inversion.
 	\item Uncertainty analysis in geophysical separate/joint inversions in both deterministic and stochastic frameworks.
 	\item Geology differentiation models.
+	
 \end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Awards \& Honors}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Awards \& Honors}
 \begin{EntriesTable}
+	
 	\Year{2020}  &
 	Outstanding Academic Achievement, University of Houston, Houston, USA
 	\\
@@ -178,48 +185,89 @@
 	\\
 	\Year{2013}  &
 	The Second Prize Scholarship, China University of Geosciences, Beijing, China
-
-
+	
 \end{EntriesTable}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Publications}
-
-
-\subsection{Peer-Reviewed}
-
-\begin{EntriesTable}
-	\Year{2020}  &
+\section*{Publications}
+\subsection*{Peer-Reviewed}
+\begin{etaremune}
+	
+	\item
 	\WeiSun, 2020. Uncertainty analysis of 3D potential-ﬁeld deterministic inversion using mixed Lp norms. \emph{Geophysics}. \Revision
-	\\
-	\Year{2020}  &
+
+	\item
 	Sun, J., \Wei, 2020. Recovering sparse models in 3D potential‐field inversion without bound dependence or staircasing problems using a mixed Lp‐norm regularization. \emph{Geophysical Prospecting}.
 	\DOI{10.1111/1365-2478.13063}.
-	\\
-	\Year{2020}  &
+
+	\item
 	Sun, J., Melo, A., Kim, J.D. and \Wei, 2020. Unveiling the 3D undercover structure of a Precambrian intrusive complex by integrating airborne magnetic and gravity gradient data into 3D quasi-geology model building. \emph{Interpretation}, 8(4), pp.1-50.
 	\DOI{10.1190/INT-2019-0273.1}.
-	\\
 
-\end{EntriesTable}
+\end{etaremune}
 
+\subsection*{In preparation}
+\begin{etaremune}
+	
+	\item
+	\WeiSun,. Uncertainty analysis of 3D geology differentiation models via joint inversion. 
+	
+\end{etaremune}
 
-
-\subsection{Conference}
-
-\begin{EntriesTable}
-	\Year{2020}  &
+\subsection*{Conference Proceedings}
+\begin{etaremune}
+	
+	\item 
 	\WeiSun, 2020. Uncertainty analysis of joint inversion using mixed Lp-norm regularization. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 925-929). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3428359.1}.
-	\\
-	\Year{2020}  &
-	Sun, J., Melo, A., Deok Kim, J. and \Wei, 2020. Characterizing a Precambrian intrusive complex by integrating potential field data into 3D quasi-geology model building. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1374-1378). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3428385.1}.
-	\\
-	\Year{2020}  &
-	\WeiSun, 2020. Quantifying uncertainties of deterministic geophysical inversions using mixed Lp norms. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1404-1408). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3420227.1}.
-	\\
 
+	\item 
+	\WeiSun, 2020. Quantifying uncertainties of deterministic geophysical inversions using mixed Lp norms. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1404-1408). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3420227.1}.
+	
+	\item 
+	Sun, J., Melo, A., Deok Kim, J. and \Wei, 2020. Characterizing a Precambrian intrusive complex by integrating potential field data into 3D quasi-geology model building. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1374-1378). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3428385.1}.
+		
+\end{etaremune}
+
+
+\section*{Invited Talks}
+%\begin{etaremune}
+%	
+%	\item
+%	\WeiSun, 2020. Uncertainty analysis of 3D potential-ﬁeld deterministic inversion using mixed Lp norms. \emph{Geophysics}. \Revision
+%	
+%	\item
+%	Sun, J., \Wei, 2020. Recovering sparse models in 3D potential‐field inversion without bound dependence or staircasing problems using a mixed Lp‐norm regularization. \emph{Geophysical Prospecting}.
+%	\DOI{10.1111/1365-2478.13063}.
+%	
+%	\item
+%	Sun, J., Melo, A., Kim, J.D. and \Wei, 2020. Unveiling the 3D undercover structure of a Precambrian intrusive complex by integrating airborne magnetic and gravity gradient data into 3D quasi-geology model building. \emph{Interpretation}, 8(4), pp.1-50.
+%	\DOI{10.1190/INT-2019-0273.1}.
+%	
+%\end{etaremune}
+
+\section*{Professional Activities}
+\begin{EntriesTable}
+	
+	\Duration{2020}{}  &
+	Core contributor of joint inversion code in SimPEG (https://simpeg.xyz/).
+	
 \end{EntriesTable}
+
+\section*{Reviewers}
+%\begin{EntriesTable}
+%	
+%	\Duration{2020}{}  &
+%	xxxxxxx
+%	\\
+%	\Duration{2020}{}  &
+%	xxxxxxxx
+%	\\
+%	\Duration{2020}{}  &
+%	xxxxxxxxx
+%	
+%\end{EntriesTable}
 
 
 
