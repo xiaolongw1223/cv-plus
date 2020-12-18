@@ -13,18 +13,32 @@
 \newcommand{\LastName}{Wei}
 \newcommand{\Initials}{X}
 \newcommand{\MyName}{\FirstName\ \LastName}
-\newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
+\newcommand{\Wei}{\textbf{\LastName, \Initials.}}  % For citations
+\newcommand{\WeiSun}{\textbf{\LastName, \Initials.} and Sun, J.}  % For citations
 \newcommand{\Email}{xiaolongw1223@gmail.com}
 \newcommand{\Website}{researchgate.net/profile/Xiaolong\_Wei}
 \newcommand{\Lab}{https://sites.google.com/view/jiajiasun}
 \newcommand{\ORCID}{0000-0002-3160-6086}
 \newcommand{\Affiliation}{\dept, \university}
 \newcommand{\Address}{
-  Science \& Research Building 1, Room 126, 3507 Cullen Blvd, Houston, Texas, USA
+  Room 126, Science \& Research Building 1, 3507 Cullen Blvd, Houston, Texas, USA
 }
 
 % Control the font size
 \usepackage{anyfontsize}
+
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\usepackage{environ}
+\NewEnviron{EntriesTable}{
+	\TablePad
+	\begin{tabularx}{\textwidth}{@{}p{0.1\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+		\BODY
+	\end{tabularx}
+}
 
 % Macros to add links
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
@@ -32,11 +46,9 @@
 % Macros to set the year and duration on the left column
 \newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1--#2}
 \newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
-\newcommand{\Ongoing}{}
-%\newcommand{\Ongoing}{$\ast$}
 \newcommand{\Future}{future}
-\newcommand{\Review}{in review}
-\newcommand{\Accepted}{accepted}
+\newcommand{\Review}{under review}
+\newcommand{\Revision}{under revision}
 \newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
 
 % numbering items in reversed orders
@@ -96,6 +108,7 @@
 % No header for the first page
 \thispagestyle{empty}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % HEADER
 \begin{center}
@@ -115,6 +128,99 @@
 		Website: \href{https://www.\Website}{\Website}
 	}
 \end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{EntriesTable}
+  \Duration{2018}{}  &
+  \textbf{Ph.D in Geophysics}, University of Houston, Houston, USA
+  \\
+  \Duration{2015}{2018}  &
+  \textbf{M.S. in Geology}, Northwest University, Xi'an, China
+  \\
+  \Duration{2011}{2015}  &
+  \textbf{B.S. in Geophysics}, China University of Geosciences, Beijing, China
+
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Research Interests}
+
+\begin{itemize}
+	\item Inversion of geophysical data sets (e.g., gravity, gravity gradiometry and magnetic data).
+	\item Structural similarity constraint joint inversion.
+	\item Uncertainty analysis in geophysical separate/joint inversions in both deterministic and stochastic frameworks.
+	\item Geology differentiation models.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards \& Honors}
+
+\begin{EntriesTable}
+	\Year{2020}  &
+	Outstanding Academic Achievement, University of Houston, Houston, USA
+	\\
+	\Year{2018}  &
+	The First Prize Scholarship, Northwest University, Xi'an, China
+	\\
+	\Year{2017}  &
+	The First Prize Scholarship, Northwest University, Xi'an, China
+	\\
+	\Year{2016}  &
+	The First Prize Scholarship, Northwest University, Xi'an, China
+	\\
+	\Year{2015}  &
+	Best Bachelor Thesis, China University of Geosciences, Beijing, China
+	\\
+	\Year{2013}  &
+	The Second Prize Scholarship, China University of Geosciences, Beijing, China
+
+
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+
+
+\subsection{Peer-Reviewed}
+
+\begin{EntriesTable}
+	\Year{2020}  &
+	\WeiSun, 2020. Uncertainty analysis of 3D potential-ﬁeld deterministic inversion using mixed Lp norms. \emph{Geophysics}. \Revision
+	\\
+	\Year{2020}  &
+	Sun, J., \Wei, 2020. Recovering sparse models in 3D potential‐field inversion without bound dependence or staircasing problems using a mixed Lp‐norm regularization. \emph{Geophysical Prospecting}.
+	\DOI{10.1111/1365-2478.13063}.
+	\\
+	\Year{2020}  &
+	Sun, J., Melo, A., Kim, J.D. and \Wei, 2020. Unveiling the 3D undercover structure of a Precambrian intrusive complex by integrating airborne magnetic and gravity gradient data into 3D quasi-geology model building. \emph{Interpretation}, 8(4), pp.1-50.
+	\DOI{10.1190/INT-2019-0273.1}.
+	\\
+
+\end{EntriesTable}
+
+
+
+\subsection{Conference}
+
+\begin{EntriesTable}
+	\Year{2020}  &
+	\WeiSun, 2020. Uncertainty analysis of joint inversion using mixed Lp-norm regularization. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 925-929). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3428359.1}.
+	\\
+	\Year{2020}  &
+	Sun, J., Melo, A., Deok Kim, J. and \Wei, 2020. Characterizing a Precambrian intrusive complex by integrating potential field data into 3D quasi-geology model building. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1374-1378). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3428385.1}.
+	\\
+	\Year{2020}  &
+	\WeiSun, 2020. Quantifying uncertainties of deterministic geophysical inversions using mixed Lp norms. In \emph{SEG Technical Program Expanded Abstracts 2020} (pp. 1404-1408). Society of Exploration Geophysicists. \DOI{10.1190/segam2020-3420227.1}.
+	\\
+
+\end{EntriesTable}
+
 
 
 
