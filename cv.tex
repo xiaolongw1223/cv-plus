@@ -4,7 +4,7 @@
 
 \documentclass[11pt, a4paper]{article}
 
-\newcommand{\dept}{Department of Earth & Atmospheric Sciences}
+\newcommand{\dept}{Department of Earth \& Atmospheric Sciences}
 \newcommand{\university}{University of Houston}
 
 % Identifying information
@@ -15,12 +15,12 @@
 \newcommand{\MyName}{\FirstName\ \LastName}
 \newcommand{\Me}{\textbf{\LastName, \Initials}}  % For citations
 \newcommand{\Email}{xiaolongw1223@gmail.com}
-\newcommand{\Website}{https://www.researchgate.net/profile/Xiaolong_Wei}
+\newcommand{\Website}{researchgate.net/profile/Xiaolong\_Wei}
 \newcommand{\Lab}{https://sites.google.com/view/jiajiasun}
 \newcommand{\ORCID}{0000-0002-3160-6086}
-\newcommand{\Affiliation}{\dept \\ \university}
+\newcommand{\Affiliation}{\dept, \university}
 \newcommand{\Address}{
-  Science & Research Building 1, 3507 Cullen Blvd, Room 216, Houston, Texas, USA
+  Science \& Research Building 1, Room 126, 3507 Cullen Blvd, Houston, Texas, USA
 }
 
 % Control the font size
@@ -95,3 +95,27 @@
 
 % No header for the first page
 \thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+\begin{center}
+	{\fontsize{36pt}{0}\selectfont \MyName}
+	\\[-0.1cm]
+	\rule{\textwidth}{0.6pt}
+	\\[0.4cm]
+	{\fontsize{10pt}{0}\selectfont
+		\Affiliation
+		\\[0.1cm]
+		\Address
+		\\[0.1cm]
+		Email: \href{mailto:\Email}{\Email}
+		\, | \,
+		ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+		\\
+		Website: \href{https://www.\Website}{\Website}
+	}
+\end{center}
+
+
+
+\end{document}
