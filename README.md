@@ -1,4 +1,4 @@
-# My-CV
+# CV-Plus
 
 This repository provides CV in both Chinese and English.
 
